@@ -1,1 +1,1 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/HickTheHopper.dir/src/main.cpp.o -o HickTheHopper  -lraylib
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/HickTheHopper.dir/src/main.cpp.o -o HickTheHopper  /Volumes/HopperStick/Code/C++/HickTheKopper/libs/raylib/src/libraylib.a -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo

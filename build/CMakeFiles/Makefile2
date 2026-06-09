@@ -64,19 +64,41 @@ CMAKE_BINARY_DIR = /Volumes/HopperStick/Code/C++/HickTheKopper/build
 
 # The main recursive "all" target.
 all: CMakeFiles/HickTheHopper.dir/all
+all: log/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/HickTheHopper.dir/codegen
+codegen: log/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: log/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/HickTheHopper.dir/clean
+clean: log/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory log
+
+# Recursive "all" directory target.
+log/all:
+.PHONY : log/all
+
+# Recursive "codegen" directory target.
+log/codegen:
+.PHONY : log/codegen
+
+# Recursive "preinstall" directory target.
+log/preinstall:
+.PHONY : log/preinstall
+
+# Recursive "clean" directory target.
+log/clean:
+.PHONY : log/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/HickTheHopper.dir

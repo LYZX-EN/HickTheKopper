@@ -95,6 +95,7 @@ HickTheHopper_EXTERNAL_OBJECTS =
 
 HickTheHopper: CMakeFiles/HickTheHopper.dir/src/main.cpp.o
 HickTheHopper: CMakeFiles/HickTheHopper.dir/build.make
+HickTheHopper: /Volumes/HopperStick/Code/C++/HickTheKopper/libs/raylib/src/libraylib.a
 HickTheHopper: CMakeFiles/HickTheHopper.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Volumes/HopperStick/Code/C++/HickTheKopper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable HickTheHopper"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HickTheHopper.dir/link.txt --verbose=$(VERBOSE)
