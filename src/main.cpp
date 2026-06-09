@@ -1,23 +1,32 @@
 #include <inttypes.h>
 
 #include <raylib.h>
+#include <rlgl.h>
 #include <raymath.h>
 #include <miku/logger.h>
 
-bool initApplication(const int screenWidth, const int screenHeight, const uint16_t fps, const char* title) {
-    
+struct Application {
+    Camera2D camera;
+    Color clearColor;
+};
+
+bool initApplication(Application& app, const int screenWidth, const int screenHeight, const uint16_t fps, const char* title) {
+    app.camera = { 0.0f };
+    app.camera.zoom = 1.0f;
+
+    app.clearColor = ColorLerp(BLACK, BLACK, 0.69f);
 
     InitWindow(screenWidth, screenHeight, title);
     SetTargetFPS(fps);
     return true;
 }
 
-void updateApplication(const Color clearColor) {
+void updateApplication(Application& app) {
     while (!WindowShouldClose()) {
 
         BeginDrawing();
 
-            ClearBackground(clearColor);
+            ClearBackground(app.clearColor);
 
             DrawText("Hoppers are cool!", 190, 200, 20, LIGHTGRAY);
 
@@ -25,7 +34,7 @@ void updateApplication(const Color clearColor) {
     }
 }
 
-void shutdownApplication() {
+void shutdownApplication(Application& app) {
     CloseWindow();
 }
 
@@ -37,15 +46,16 @@ int main() {
     const uint16_t fps = 240;
     const char* title = "HickTheKopper";
 
-    if (!initApplication(screenWidth, screenHeight, fps, title)) {
+    Application app;
+    if (!initApplication(app, screenWidth, screenHeight, fps, title)) {
         LOG_CRITICAL("%s", "Initialize Application failed");
         return 1;
     }
 
-    const Color clearColor = ColorLerp(BLACK, BLACK, 0.69f);
+    
 
-    updateApplication(clearColor);
+    updateApplication(app);
 
-    shutdownApplication();
+    shutdownApplication(app);
     return 0;
 }
