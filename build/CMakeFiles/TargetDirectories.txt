@@ -1,0 +1,3 @@
+/Volumes/HopperStick/Code/C++/HickTheKopper/build/CMakeFiles/HickTheHopper.dir
+/Volumes/HopperStick/Code/C++/HickTheKopper/build/CMakeFiles/edit_cache.dir
+/Volumes/HopperStick/Code/C++/HickTheKopper/build/CMakeFiles/rebuild_cache.dir

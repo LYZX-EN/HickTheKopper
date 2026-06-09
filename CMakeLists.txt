@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 # source fies
 add_executable(${PROJECT_NAME}
-    main.cpp
+    src/main.cpp
 )
 
 # raylib
